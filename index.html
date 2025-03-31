@@ -97,48 +97,98 @@ by 2030. </p>
     </section>
 
     <!-- Our Member Section -->
-    <section id="work" class="section dark-bg">
-        <div class="container">
-            <h2>Board Members</h2>
-            <div class="board-members">
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Utpal+Baishya" alt="Utpal Baishya">
-                    <h3>Utpal Baishya</h3>
-                    <p>Chair Person</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Dr.+Baharul+Ali" alt="Dr. Baharul Ali">
-                    <h3>Dr. Baharul Ali</h3>
-                    <p>Vice-Chair Person</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Arunima+Baishya+Kalita" alt="Arunima Baishya Kalita">
-                    <h3>Arunima Baishya Kalita</h3>
-                    <p>Secretary</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Dipankar+Kalita" alt="Dipankar Kalita">
-                    <h3>Dipankar Kalita</h3>
-                    <p>Executive Secretary</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Kamal+Krishna+Das" alt="Kamal Krishna Das">
-                    <h3>Kamal Krishna Das</h3>
-                    <p>Treasurer</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Bhramar+Mazumdar" alt="Bhramar Mazumdar">
-                    <h3>Bhramar Mazumdar</h3>
-                    <p>Member</p>
-                </div>
-                <div class="board-member">
-                    <img src="https://placehold.co/200x200?text=Nitul+Kalita" alt="Nitul Kalita">
-                    <h3>Nitul Kalita</h3>
-                    <p>Member</p>
-                </div>
+<section id="work" class="section dark-bg">
+    <div class="container">
+        <h2>Board Members</h2>
+        <div class="board-members">
+            <!-- First 3 members (visible by default) -->
+            <div class="board-member">
+                <img src="https://placehold.co/200x200?text=Utpal+Baishya" alt="Utpal Baishya">
+                <h3>Utpal Baishya</h3>
+                <p>Chair Person</p>
+            </div>
+            <div class="board-member">
+                <img src="https://placehold.co/200x200?text=Dr.+Baharul+Ali" alt="Dr. Baharul Ali">
+                <h3>Dr. Baharul Ali</h3>
+                <p>Vice-Chair Person</p>
+            </div>
+            <div class="board-member">
+                <img src="https://placehold.co/200x200?text=Arunima+Baishya+Kalita" alt="Arunima Baishya Kalita">
+                <h3>Arunima Baishya Kalita</h3>
+                <p>Secretary</p>
+            </div>
+            
+            <!-- Remaining members (hidden by default) -->
+            <div class="board-member hidden-member">
+                <img src="https://placehold.co/200x200?text=Dipankar+Kalita" alt="Dipankar Kalita">
+                <h3>Dipankar Kalita</h3>
+                <p>Executive Secretary</p>
+            </div>
+            <div class="board-member hidden-member">
+                <img src="https://placehold.co/200x200?text=Kamal+Krishna+Das" alt="Kamal Krishna Das">
+                <h3>Kamal Krishna Das</h3>
+                <p>Treasurer</p>
+            </div>
+            <div class="board-member hidden-member">
+                <img src="https://placehold.co/200x200?text=Bhramar+Mazumdar" alt="Bhramar Mazumdar">
+                <h3>Bhramar Mazumdar</h3>
+                <p>Member</p>
+            </div>
+            <div class="board-member hidden-member">
+                <img src="https://placehold.co/200x200?text=Nitul+Kalita" alt="Nitul Kalita">
+                <h3>Nitul Kalita</h3>
+                <p>Member</p>
             </div>
         </div>
-    </section>
+        <button id="viewAllBtn" class="view-all-btn">View All</button>
+    </div>
+</section>
+
+<style>
+    .hidden-member {
+        display: none;
+    }
+    
+    .view-all-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .view-all-btn:hover {
+        background-color: #0056b3;
+    }
+    
+    .board-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .board-member {
+        text-align: center;
+        width: 200px;
+    }
+</style>
+
+<script>
+    document.getElementById('viewAllBtn').addEventListener('click', function() {
+        // Show all hidden members
+        document.querySelectorAll('.hidden-member').forEach(member => {
+            member.style.display = 'block';
+        });
+        
+        // Hide the button
+        this.style.display = 'none';
+    });
+</script>
 
     <!-- Join Us Section -->
     <section id="join" class="section">
